@@ -1,0 +1,129 @@
+"use client"
+
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { ExternalLink, Github } from "lucide-react"
+
+export default function ProjectsPage() {
+  const projects = [
+    {
+      title: "MidNight Bloom",
+      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration",
+      image: "/MidNightBloom.png?height=200&width=300",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      liveUrl: "https://midnightbloom.netlify.app/",
+      githubUrl: "https://github.com/harshal0095/MidNightBloom.git",
+    },
+    {
+      title: "The Golden Vine",
+      description: "Interactive portfolio built with Three.js and React Three Fiber",
+      image: "/TheGoldenVine.png?height=200&width=300",
+      technologies: ["Three.js", "React", "GSAP", "WebGL"],
+      liveUrl: "https://thegoldenvine.netlify.app/",
+      githubUrl: "https://github.com/harshal0095/TheGoldenVine.git",
+    },
+    {
+      title: "Task Management App Coming Soon!",
+      description: "Collaborative task management tool with real-time updates",
+      image: "/placeholder.svg?height=200&width=300",
+      technologies: ["Next.js", "Socket.io", "PostgreSQL", "Prisma"],
+      liveUrl: "https://your-task-app.com",
+      githubUrl: "https://github.com/your-task-repo",
+    },
+    {
+      title: "AI Chat Application Coming Soon!",
+      description: "Real-time chat app with AI integration and modern UI",
+      image: "/placeholder.svg?height=200&width=300",
+      technologies: ["React", "OpenAI", "WebSocket", "Tailwind"],
+      liveUrl: "https://your-ai-chat.com",
+      githubUrl: "https://github.com/your-ai-chat-repo",
+    },
+  ]
+
+  const handleLiveDemo = (url: string) => {
+    if (url && url !== "#") {
+      window.open(url, "_blank", "noopener,noreferrer")
+    }
+  }
+
+  const handleGithubCode = (url: string) => {
+    if (url && url !== "#") {
+      window.open(url, "_blank", "noopener,noreferrer")
+    }
+  }
+
+  return (
+    <div className="min-h-full px-4 sm:px-6 lg:px-8 py-16 md:py-20 pb-24 md:pb-8 relative z-10">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6 animate-fade-in-up">
+            My Projects
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto animate-fade-in-up animation-delay-200 px-4">
+            A showcase of my recent work and creative projects
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-20">
+          {projects.map((project, index) => (
+            <Card
+              key={project.title}
+              className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105 animate-fade-in-up"
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
+              <CardHeader className="p-0">
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    className="w-full h-40 sm:h-48 object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                </div>
+              </CardHeader>
+
+              <CardContent className="p-4 sm:p-6">
+                <CardTitle className="text-white mb-3 text-lg sm:text-xl">{project.title}</CardTitle>
+                <p className="text-gray-300 mb-4 text-sm sm:text-base">{project.description}</p>
+
+                <div className="flex flex-wrap gap-2 mb-4 sm:mb-6">
+                  {project.technologies.map((tech) => (
+                    <Badge
+                      key={tech}
+                      variant="secondary"
+                      className="bg-white/10 text-white border-white/20 text-xs sm:text-sm"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button
+                    size="sm"
+                    onClick={() => handleLiveDemo(project.liveUrl)}
+                    disabled={!project.liveUrl || project.liveUrl === "#"}
+                    className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Live Demo
+                  </Button>
+                  <Button
+                    size="sm"
+                    onClick={() => handleGithubCode(project.githubUrl)}
+                    disabled={!project.githubUrl || project.githubUrl === "#"}
+                    className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    <Github className="w-4 h-4 mr-2" />
+                    Code
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
