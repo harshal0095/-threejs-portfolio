@@ -9,35 +9,35 @@ export default function ProjectsPage() {
   const projects = [
     {
       title: "MidNight Bloom",
-      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration",
+      description: "Responsive Restaurant Website,Designed and developed a fully responsive restaurant website using only HTML and CSS.",
       image: "/MidNightBloom.png?height=200&width=300",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      technologies: ["Html", "Css", "ResponsiveDesign",],
       liveUrl: "https://midnightbloom.netlify.app/",
-      githubUrl: "https://github.com/harshal0095/MidNightBloom.git",
+      // githubUrl: "https://github.com/harshal0095/MidNightBloom.git",
     },
     {
       title: "The Golden Vine",
-      description: "Interactive portfolio built with Three.js and React Three Fiber",
+      description: "Responsive Restaurant Website, Designed and developed a fully responsive restaurant website using only HTML and CSS.",
       image: "/TheGoldenVine.png?height=200&width=300",
-      technologies: ["Three.js", "React", "GSAP", "WebGL"],
+      technologies: ["Html", "Css", "ResponsiveDesign"],
       liveUrl: "https://thegoldenvine.netlify.app/",
-      githubUrl: "https://github.com/harshal0095/TheGoldenVine.git",
+      // githubUrl: "https://github.com/harshal0095/TheGoldenVine.git",
     },
     {
-      title: "Task Management App Coming Soon!",
-      description: "Collaborative task management tool with real-time updates",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["Next.js", "Socket.io", "PostgreSQL", "Prisma"],
-      liveUrl: "https://your-task-app.com",
-      githubUrl: "https://github.com/your-task-repo",
+      title: "CovidTracker",
+      description: "Developed a real-time COVID-19 tracker displaying global and country-wise statistics using public APIs, featuring dynamic charts, dark mode, and responsive UI for all devices.",
+      image: "/CovidTrack.png?height=200&width=300",
+      technologies: ["Html", "Css","JavaScript"],
+      liveUrl: "https://covidtrack2025.netlify.app/",
+      // githubUrl: "",
     },
     {
       title: "AI Chat Application Coming Soon!",
-      description: "Real-time chat app with AI integration and modern UI",
-      image: "/placeholder.svg?height=200&width=300",
-      technologies: ["React", "OpenAI", "WebSocket", "Tailwind"],
-      liveUrl: "https://your-ai-chat.com",
-      githubUrl: "https://github.com/your-ai-chat-repo",
+      description: "Real-time chat app with AI integration and modern UI,Developed a custom AI-powered chatbot builder , enabling users to create intelligent chatbots with personalized behavior and dynamic responses.",
+      image: "/AiChat.png?height=200&width=300",
+      technologies: ["React", "Groq Api", "Tailwind CSS"],
+      liveUrl: "https://aichatbuilder.netlify.app/",
+      // githubUrl: "https://github.com/your-ai-chat-repo",
     },
   ]
 
@@ -109,7 +109,7 @@ export default function ProjectsPage() {
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
                   </Button>
-                  <Button
+                  {/* <Button
                     size="sm"
                     onClick={() => handleGithubCode(project.githubUrl)}
                     disabled={!project.githubUrl || project.githubUrl === "#"}
@@ -117,7 +117,7 @@ export default function ProjectsPage() {
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
-                  </Button>
+                  </Button> */}
                 </div>
               </CardContent>
             </Card>

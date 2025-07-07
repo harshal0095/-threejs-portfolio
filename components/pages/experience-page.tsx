@@ -7,7 +7,7 @@ import { Calendar, MapPin, Building, Award, TrendingUp } from "lucide-react"
 export default function ExperiencePage() {
   const experiences = [
     {
-      title: "Frontend Developer / Tesiting Product",
+      title: "Frontend Developer / Testing Product",
       company: "Curateit",
       location: "London",
       duration: "2024 - 2025",
@@ -18,7 +18,7 @@ export default function ExperiencePage() {
         "Identified UX/UI issues and bugs, and collaborated with developers/designers to implement necessary fixes and enhancements",
         "Performed rigorous manual and automated testing on both platforms to ensure smooth performance, bug-free user flows, and cross-browser/device compatibility.",
       ],
-      technologies: ["React", "Next.js", "TypeScript","ManualTesting" ],
+      technologies: ["Javascript","React", "Next.js", "TypeScript","ManualTesting" ],
       achievements: [""],
     },
 
@@ -26,7 +26,7 @@ export default function ExperiencePage() {
   ]
 
   const skills = [
-    { category: "Frontend", items: ["HTML", "CSS", "JavaScript","PHP","React", "Next.js","TypeScript", "Tailwind CSS"] },
+    { category: "Frontend", items: ["HTML/CSS", "MQ_BT","DSA/C++","Php", "Basic React.js","BasicThree.js", "BasicMYsQL",] },
     { category: "Database", items: ["MySQL","Firebase"] },
     { category: "Tools & Others", items: ["Testing"] },
   ]

@@ -3,30 +3,44 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowDown, Github, Linkedin, Twitter, Code, Palette, Zap, Download, Eye, Mail } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Twitter, Code, Palette, Focus , Download, Eye, Mail } from "lucide-react"
 import Testimonials from "@/components/testimonials"
 import Services from "@/components/services"
 import FunFacts from "@/components/fun-facts"
 import BlogPreview from "@/components/blog-preview"
+import Link from "next/link"
 
 export default function HomePage() {
   const quickStats = [
-    { label: "Years Experience", value: "5+", icon: Code },
-    { label: "Projects Completed", value: "50+", icon: Palette },
-    { label: "Happy Clients", value: "30+", icon: Zap },
+    { label: "Years Experience", value: "1", icon: Code },
+    { label: "Projects Completed", value: "5", icon: Palette },
+    { label: "Dedicated Focus", value: "100%", icon: Focus },
   ]
 
-  const featuredSkills = ["React", "Next.js", "Three.js", "Node.js", "TypeScript", "AWS"]
+  const handleDownloadCV = () => {
+    // CV file का path - आप अपना CV file public folder में रखें
+    const cvPath = "/cv/Harshal_Resume.pdf"
+    
+    // Create a temporary anchor element to trigger download
+    const link = document.createElement('a')
+    link.href = cvPath
+    link.download = "Harshal_Resume.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
+  const featuredSkills = ["HTML/CSS", "MQ_BT","DSA/C++","Php","JavaScript","Basic React", "BasicThree.js","BasicMYsQL",]
 
   const recentProjects = [
     {
-      title: "E-Commerce Platform",
+      title: "E-Commerce Platform--Coming soon",
       description: "Full-stack solution with React & Node.js",
       image: "/placeholder.svg?height=150&width=200",
       tech: ["React", "Node.js", "MongoDB"],
     },
     {
-      title: "3D Portfolio",
+      title: "3D Portfolio --Coming soon",
       description: "Interactive portfolio with Three.js",
       image: "/placeholder.svg?height=150&width=200",
       tech: ["Three.js", "React", "WebGL"],
@@ -57,59 +71,68 @@ export default function HomePage() {
           </p>
 
           <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-12 max-w-3xl mx-auto animate-fade-in-up animation-delay-600 px-4">
-            I create beautiful, interactive web experiences using modern technologies. Specializing in React, Three.js,
+            I create beautiful, interactive web experiences using modern technologies. Specializing in HTML/CSS, JavaScript, Basic ReactJs,
             and scalable Frontend solutions.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-12 sm:mb-16 animate-fade-in-up animation-delay-800 px-4">
-            <Button
+            {/* <Button
               size="lg"
               className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white border-0 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold shadow-2xl w-full sm:w-auto"
             >
               <Eye className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
               View My Work
-            </Button>
+            </Button> */}
             <Button
               size="lg"
+              onClick={handleDownloadCV}
               className="bg-white text-black hover:bg-gray-100 px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold backdrop-blur-sm w-full sm:w-auto"
             >
               <Download className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
               Download CV
             </Button>
-            <Button
-              size="lg"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold backdrop-blur-sm w-full sm:w-auto"
-            >
-              <Mail className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
-              Get In Touch
-            </Button>
+            <Link href="/contact">
+              {/* <Button
+                size="lg"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold backdrop-blur-sm w-full sm:w-auto"
+              >
+                <Mail className="w-4 sm:w-5 h-4 sm:h-5 mr-2" />
+                Get In Touch
+              </Button> */}
+            </Link>
           </div>
 
           {/* Social Links */}
-          <div className="flex justify-center space-x-4 sm:space-x-6 mb-12 sm:mb-16 animate-fade-in-up animation-delay-1000">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white hover:text-green-400 hover:bg-white/10 w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-white/20"
-            >
-              <Github className="w-5 sm:w-6 h-5 sm:h-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white hover:text-blue-400 hover:bg-white/10 w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-white/20"
-            >
-              <Linkedin className="w-5 sm:w-6 h-5 sm:h-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-white hover:text-blue-400 hover:bg-white/10 w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-white/20"
-            >
-              <Twitter className="w-5 sm:w-6 h-5 sm:h-6" />
-            </Button>
-          </div>
+<div className="flex justify-center space-x-4 sm:space-x-6 mb-12 sm:mb-16 animate-fade-in-up animation-delay-1000">
+  <a href="https://github.com/harshal0095" target="_blank" rel="noopener noreferrer">
+    <Button
+      variant="ghost"
+      size="icon"
+      className="text-white hover:text-green-400 hover:bg-white/10 w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-white/20"
+    >
+      <Github className="w-5 sm:w-6 h-5 sm:h-6" />
+    </Button>
+  </a>
+  <a href="https://www.linkedin.com/in/harshal-panchal-a0b402258/" target="_blank" rel="noopener noreferrer">
+    <Button
+      variant="ghost"
+      size="icon"
+      className="text-white hover:text-blue-400 hover:bg-white/10 w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-white/20"
+    >
+      <Linkedin className="w-5 sm:w-6 h-5 sm:h-6" />
+    </Button>
+  </a>
+  <a href="https://x.com/Param_0095" target="_blank" rel="noopener noreferrer">
+    <Button
+      variant="ghost"
+      size="icon"
+      className="text-white hover:text-blue-400 hover:bg-white/10 w-10 sm:w-12 h-10 sm:h-12 rounded-full border border-white/20"
+    >
+      <Twitter className="w-5 sm:w-6 h-5 sm:h-6" />
+    </Button>
+  </a>
+</div>
         </div>
 
         <div className="absolute bottom-24 md:bottom-8 animate-bounce">
@@ -191,29 +214,29 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="text-center">
-              <Button
-                size="lg"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold backdrop-blur-sm"
-              >
-                View All Projects
-              </Button>
-            </div>
+            {/* <div className="text-center"> */}
+              {/* <Button */}
+              {/* /  size="lg" */}
+                {/* className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 sm:px-8 py-3 text-base sm:text-lg font-semibold backdrop-blur-sm" */}
+              {/* > */}
+                {/* View All Projects */}
+              {/* </Button> */}
+            {/* </div> */}
           </div>
         </div>
-      </div>
+       </div>
 
       {/* Fun Facts Section */}
-      <FunFacts />
+      {/* <FunFacts /> */}
 
       {/* Services Section */}
       <Services />
 
       {/* Testimonials Section */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* Blog Preview Section */}
-      <BlogPreview />
+      {/* <BlogPreview /> */}
     </div>
   )
 }

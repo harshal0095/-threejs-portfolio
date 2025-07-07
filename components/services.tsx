@@ -9,37 +9,20 @@ export default function Services() {
       icon: Code,
       title: "Web Development",
       description: "Custom websites and web applications built with modern technologies",
-      features: ["React/Next.js", "Responsive Design", "Performance Optimization"],
+      features: ["Html/css","Php","Javascript", "React Js", "Responsive Design", "Performance Optimization"],
     },
-    {
-      icon: Smartphone,
-      title: "Mobile Development",
-      description: "Cross-platform mobile apps that work seamlessly on all devices",
-      features: ["React Native", "iOS & Android", "App Store Deployment"],
-    },
+   
     {
       icon: Globe,
       title: "3D Web Experiences",
       description: "Immersive 3D websites and interactive experiences using Three.js",
-      features: ["Three.js", "WebGL", "Interactive Animations"],
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Beautiful, user-friendly interfaces that convert visitors to customers",
-      features: ["Figma Design", "User Research", "Prototyping"],
+      features: ["Three.js", "Interactive Animations"],
     },
     {
       icon: Database,
-      title: "Frontend Development",
+      title: "Backend Development",
       description: "Scalable server-side solutions and API development",
-      features: ["Node.js", "Database Design", "Cloud Deployment"],
-    },
-    {
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Speed up your website and improve user experience",
-      features: ["Core Web Vitals", "SEO Optimization", "Caching Strategies"],
+      features: ["Node.js", "MySQL"],
     },
   ]
 

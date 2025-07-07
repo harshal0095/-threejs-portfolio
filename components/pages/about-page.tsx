@@ -6,18 +6,14 @@ import { Code, Palette, Zap } from "lucide-react"
 
 export default function AboutPage() {
   const skills = [
-    "React",
-    "Next.js",
-    "TypeScript",
-    "Three.js",
-    "Node.js",
-    "Python",
-    "MongoDB",
-    "PostgreSQL",
-    "AWS",
-    "Docker",
-    "GraphQL",
-    "Tailwind CSS",
+    "HTML/CSS",
+    "MQ_BT",
+    "DSA/C++",
+    "Php",
+    "JavaScript",
+    "BasicReact.js",
+    "BasicThree.js",
+    "BasicMYsQL",
   ]
 
   return (
@@ -28,7 +24,7 @@ export default function AboutPage() {
             About Me
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto animate-fade-in-up animation-delay-200 px-4">
-            Passionate developer with 5+ years of experience creating innovative digital solutions
+            Passionate developer with 1 years of experience creating innovative digital solutions
           </p>
         </div>
 
@@ -37,7 +33,7 @@ export default function AboutPage() {
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">My Story</h3>
             <div className="space-y-4 text-gray-300 text-sm sm:text-base">
               <p>
-                I started my journey in web development 5 years ago, driven by curiosity and a passion for creating
+                I started my journey in web development 1 years ago, driven by curiosity and a passion for creating
                 beautiful, functional digital experiences. What began as a hobby quickly evolved into a career.
               </p>
               <p>
@@ -60,7 +56,7 @@ export default function AboutPage() {
                     <h4 className="text-lg sm:text-xl font-semibold text-white">Frontend Development</h4>
                   </div>
                   <p className="text-gray-300 text-sm sm:text-base">
-                    Creating responsive, interactive user interfaces with React, Next.js, and Three.js
+                    Creating responsive, interactive user interfaces with Html/Css,Javascript,React Js, and Three js.
                   </p>
                 </CardContent>
               </Card>
@@ -72,7 +68,7 @@ export default function AboutPage() {
                     <h4 className="text-lg sm:text-xl font-semibold text-white">Backend Development</h4>
                   </div>
                   <p className="text-gray-300 text-sm sm:text-base">
-                    Building scalable APIs and server-side applications with Node.js, Python, and cloud services
+                    Building scalable APIs and server-side applications and cloud services
                   </p>
                 </CardContent>
               </Card>

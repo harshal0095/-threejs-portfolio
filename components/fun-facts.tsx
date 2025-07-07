@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Card, CardContent } from "@/components/ui/card"
+// import { Card, CardContent } from "@/components/ui/card"
 import { Coffee, Clock, Users, Award } from "lucide-react"
 
 export default function FunFacts() {
@@ -75,26 +75,26 @@ export default function FunFacts() {
     },
   ]
 
-  return (
-    <div className="py-16 sm:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 animate-fade-in-up">Fun Facts & Numbers</h3>
+  // return (
+    // <div className="py-16 sm:py-20">
+      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> */}
+        {/* <div className="text-center mb-12 sm:mb-16"> */}
+          {/* <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 animate-fade-in-up">Fun Facts & Numbers</h3>
           <p className="text-gray-300 animate-fade-in-up animation-delay-200">
             Some interesting statistics about my journey
-          </p>
-        </div>
+          </p> */}
+        // </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
-          {facts.map((fact, index) => {
-            const IconComponent = fact.icon
-            return (
-              <Card
-                key={fact.label}
-                className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105 animate-fade-in-up"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <CardContent className="p-4 sm:p-6 text-center">
+        {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8"> */}
+          {/* {facts.map((fact, index) => { */}
+            {/* // const IconComponent = fact.icon
+            return ( */}
+              {/* <Card */}
+                {/* // key={fact.label}
+                // className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105 animate-fade-in-up"
+                // style={{ animationDelay: `${index * 200}ms` }} */}
+              {/* > */}
+                {/* <CardContent className="p-4 sm:p-6 text-center">
                   <div className="mb-3 sm:mb-4">
                     <IconComponent className={`w-8 h-8 mx-auto ${fact.color}`} />
                   </div>
@@ -103,12 +103,12 @@ export default function FunFacts() {
                     {fact.suffix}
                   </div>
                   <p className="text-gray-300 text-xs sm:text-sm">{fact.label}</p>
-                </CardContent>
-              </Card>
-            )
-          })}
-        </div>
-      </div>
-    </div>
-  )
+                </CardContent> */}
+              {/* </Card> */}
+            {/* ) */}
+          {/* })} */}
+        // </div>
+      // </div>
+    // </div>
+  // )
 }
