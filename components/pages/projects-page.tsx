@@ -32,11 +32,19 @@ export default function ProjectsPage() {
       // githubUrl: "",
     },
     {
-      title: "AI Chat Application Coming Soon!",
+      title: "AIChatbuilder",
       description: "Real-time chat app with AI integration and modern UI,Developed a custom AI-powered chatbot builder , enabling users to create intelligent chatbots with personalized behavior and dynamic responses.",
       image: "/AiChat.png?height=200&width=300",
       technologies: ["React", "Groq Api", "Tailwind CSS"],
       liveUrl: "https://aichatbuilder.netlify.app/",
+      // githubUrl: "https://github.com/your-ai-chat-repo",
+    },
+        {
+      title: "Location QR Code Generator",
+      description: "A clean and user-friendly Location QR Code Generator built using only HTML, CSS, and JavaScript. Users can enter geographic coordinates (latitude and longitude), and the tool instantly generates a scannable QR code that redirects to the entered location on Google Maps.",
+      image: "/QrCode.png?height=200&width=300",
+      technologies: ["Html", "Css", "JavaScript"],
+      liveUrl: "https://locationganaretor.netlify.app/",
       // githubUrl: "https://github.com/your-ai-chat-repo",
     },
   ]
